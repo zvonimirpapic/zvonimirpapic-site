@@ -3,11 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zvonimir Papic</title>
+  <title>Zvonimir Papic | Personal Investing & Decision Making</title>
+  <meta name="description" content="Educational content on investing, decision-making, and financial literacy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <h1>Zvonimir Papic</h1>
-  <p>Connected ✅</p>
+  <!-- Announcement Bar (Optional) -->
+  <div class="announcement-bar">
+    New article: Understanding Market Cycles • <a href="/articles/sample-article">Read now</a>
+  </div>
 
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">Zvonimir Papic</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Investing Made Clear</h1>
+        <p>Educational insights on markets, decision-making, and building wealth through thoughtful analysis.</p>
+        <a href="/articles" class="btn">Explore Articles</a>
+      </div>
+    </section>
+
+    <!-- Search Band -->
+    <section class="search-band">
+      <div class="container">
+        <div class="search-band-content">
+          <h2>Find What You're Looking For</h2>
+          <p>Search through articles, insights, and educational content</p>
+          <form class="search-form" role="search">
+            <input type="search" class="search-input" placeholder="Search articles..." aria-label="Search articles">
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Latest Articles</h2>
+          <p>Explore our most recent educational content</p>
+        </div>
+        <div class="articles-grid">
+          <article class="article-card">
+            <h3><a href="/articles/sample-article">Understanding Market Cycles</a></h3>
+            <p>A deep dive into how market cycles work and what they mean for long-term investors.</p>
+            <div class="article-meta">Published: March 2024 • 5 min read</div>
+          </article>
+          <article class="article-card">
+            <h3><a href="/articles">The Psychology of Decision Making</a></h3>
+            <p>Exploring cognitive biases and how they affect our investment decisions.</p>
+            <div class="article-meta">Published: February 2024 • 7 min read</div>
+          </article>
+          <article class="article-card">
+            <h3><a href="/articles">Building a Long-Term Portfolio</a></h3>
+            <p>Principles for constructing a portfolio that stands the test of time.</p>
+            <div class="article-meta">Published: January 2024 • 6 min read</div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-lg);">
+          <a href="/articles" class="btn btn-secondary">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Stay Informed</h2>
+          <p>Get weekly insights on investing, markets, and decision-making delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--spacing-sm);">
+            No spam. Unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Zvonimir Papic</h3>
+          <p>Educational content on investing and decision-making. Not financial advice.</p>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: var(--spacing-sm);">
+            Connected ✅
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Content</h4>
+          <ul>
+            <li><a href="/articles">Articles</a></li>
+            <li><a href="/articles/sample-article">Latest Article</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/about#disclaimer">Disclaimer</a></li>
+            <li><a href="/contact">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Zvonimir Papic. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" aria-label="GitHub">⚡</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js"></script>
 </body>
 </html>

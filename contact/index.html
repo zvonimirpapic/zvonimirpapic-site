@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Zvonimir Papic</title>
+  <meta name="description" content="Get in touch with questions, feedback, or suggestions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">Zvonimir Papic</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/#newsletter">Newsletter</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Contact Content -->
+  <main>
+    <section class="section">
+      <div class="container-narrow">
+        <div class="section-title">
+          <h1>Get in Touch</h1>
+          <p>Have questions, feedback, or suggestions? I'd love to hear from you.</p>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto;">
+          <form>
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+          </form>
+
+          <div style="margin-top: var(--spacing-xl); padding-top: var(--spacing-md); border-top: 1px solid var(--border);">
+            <h3 style="margin-bottom: var(--spacing-sm);">Other Ways to Connect</h3>
+            <p style="color: var(--text-muted); margin-bottom: var(--spacing-sm);">
+              You can also reach out through social media or subscribe to the newsletter for regular updates and insights.
+            </p>
+            <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+              <a href="/#newsletter" class="btn btn-secondary">Subscribe to Newsletter</a>
+              <a href="/articles" class="btn btn-secondary">Browse Articles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Zvonimir Papic</h3>
+          <p>Educational content on investing and decision-making. Not financial advice.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Content</h4>
+          <ul>
+            <li><a href="/articles">Articles</a></li>
+            <li><a href="/articles/sample-article">Latest Article</a></li>
+            <li><a href="/#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/about#disclaimer">Disclaimer</a></li>
+            <li><a href="/contact">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Zvonimir Papic. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" aria-label="GitHub">⚡</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js"></script>
+</body>
+</html>

@@ -513,7 +513,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
 }
@@ -594,6 +594,203 @@ footer {
   transform: translateY(-2px);
 }
 
+/* Monetization Styles */
+
+/* Product Cards */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.product-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.product-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.product-card h3 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.product-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: var(--spacing-sm) 0;
+  font-family: var(--font-serif);
+}
+
+/* Affiliate Links */
+.affiliate-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.affiliate-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.affiliate-disclosure {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+/* Sponsored Content */
+.sponsored-section {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.sponsored-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sponsored-section h3 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.sponsored-section p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Premium Badge */
+.premium-badge {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Two Column Newsletter */
+.two-column-newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.newsletter-tier {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.premium-tier {
+  border-color: var(--accent);
+  position: relative;
+}
+
+.premium-tier h3 {
+  margin-top: var(--spacing-xs);
+}
+
+.newsletter-tier h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.newsletter-tier p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.newsletter-tier ul {
+  list-style: none;
+  text-align: left;
+  margin: var(--spacing-sm) 0;
+  padding-left: 0;
+}
+
+.newsletter-tier ul li {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.newsletter-tier ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Resources List */
+.resources-list {
+  margin-top: var(--spacing-md);
+}
+
+.resource-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  transition: var(--transition);
+}
+
+.resource-item:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.resource-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.resource-item p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.95rem;
+}
+
+.resource-item .affiliate-link {
+  display: inline-block;
+  margin-top: var(--spacing-xs);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .mobile-menu-toggle {
@@ -654,6 +851,15 @@ footer {
   
   .container {
     padding: 0 var(--spacing-sm);
+  }
+
+  .two-column-newsletter {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }
 

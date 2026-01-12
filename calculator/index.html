@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Investment Growth Calculator | Zvonimir Papic</title>
+  <meta name="description" content="See how your money could grow over time. Simple investment calculator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">Zvonimir Papic</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/calculator">Calculator</a></li>
+          <li><a href="/#newsletter">Newsletter</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Calculator Content -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Investment Growth Calculator</h1>
+          <p>See how your money could grow over time.</p>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--spacing-xs);">
+            This is a simple estimate. Not financial advice.
+          </p>
+        </div>
+
+        <div class="calculator-container">
+          <!-- Inputs Column -->
+          <div class="calculator-inputs">
+            <div class="calculator-form">
+              <div class="form-group">
+                <label for="monthly-deposit" class="form-label">Monthly deposit</label>
+                <div style="position: relative;">
+                  <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);">$</span>
+                  <input type="number" id="monthly-deposit" name="monthly-deposit" class="form-input" value="100" min="0" step="0.01" style="padding-left: 2rem;">
+                </div>
+                <small class="form-helper" id="deposit-helper"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="years" class="form-label">Years</label>
+                <input type="number" id="years" name="years" class="form-input" value="20" min="1" max="60" step="1">
+                <small class="form-helper" id="years-helper"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="return-rate" class="form-label">Expected return (%)</label>
+                <div style="position: relative;">
+                  <input type="number" id="return-rate" name="return-rate" class="form-input" value="7" min="0" max="20" step="0.1" style="padding-right: 2rem;">
+                  <span style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);">%</span>
+                </div>
+                <small class="form-helper" id="return-helper"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="starting-amount" class="form-label">Starting amount (optional)</label>
+                <div style="position: relative;">
+                  <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);">$</span>
+                  <input type="number" id="starting-amount" name="starting-amount" class="form-input" value="0" min="0" step="0.01" style="padding-left: 2rem;">
+                </div>
+                <small class="form-helper" id="starting-helper"></small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Column -->
+          <div class="calculator-results">
+            <!-- Results Cards -->
+            <div class="results-cards">
+              <div class="result-card">
+                <div class="result-label">Future Value</div>
+                <div class="result-value" id="future-value">$0</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">Total Contributed</div>
+                <div class="result-value" id="total-contributed">$0</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-label">Total Growth</div>
+                <div class="result-value" id="total-growth">$0</div>
+              </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-container">
+              <canvas id="growth-chart" width="600" height="300"></canvas>
+            </div>
+
+            <!-- Copy Results Button -->
+            <button id="copy-results" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-md);">
+              Copy Results
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Zvonimir Papic</h3>
+          <p>Simple investing notes. Not financial advice.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Content</h4>
+          <ul>
+            <li><a href="/articles">Articles</a></li>
+            <li><a href="/articles/sample-article">Latest Article</a></li>
+            <li><a href="/#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/calculator">Calculator</a></li>
+            <li><a href="/#newsletter">Free Newsletter</a></li>
+            <li><a href="/#newsletter">Premium Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/about#disclaimer">Disclaimer</a></li>
+            <li><a href="/contact">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zvonimir Papic. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" aria-label="GitHub">⚡</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js"></script>
+  <script src="/assets/calculator.js"></script>
+</body>
+</html>
